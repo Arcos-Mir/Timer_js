@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos de Tiempo</title>
+</head>
+<body>
+
+    <button id="btn-iniciar">Iniciar</button>
+    <button id="btn-detener">Detener</button>
+    <script>
+        // ----- setTimeout()
+        function saludo () {
+            alert('Hola Mundo');
+        }
+        //NOTA: CON ESTE SE PUEDEN PROGRAMAR RELOJES, TIMERS, CRONOMETROS
+        
+        // var tiempo = setTimeout(saludo, 3000);
+        // clearTimeout(tiempo);//para limpiar o eliminar el timeout
+        // //setTimeout(saludo, 3000)//el primer valor es el nombre de la funcion y el segundo es la cantidad de tiempo en milisegundo de retraso paraq ue se ejecute la funcion ejemplo 1 seg = 1000
+        // document.getElementById('btn-iniciar').addEventListener('click', function() {
+        //     setTimeout(saludo, 3000);
+        // })
+
+        // ----- setTimeout() es para intervalos de tiempo
+
+        //setInterval(saludo, 3000);//de forma infinita se ejjecuta el intervalo
+        var intervalo = setInterval(saludo, 3000);
+        document.getElementById('btn-detener').addEventListener('click', function(){
+            clearInterval(intervalo);
+        })
+
+
+    </script>
+</body>
+</html>
